@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TermProject #3 - 일기장</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="bodyWrapper">
+      <header>
+        <h1>오늘의 일기</h1>
+      </header>
+      <div class="menuBackground"></div>
+      <div class="menu">
+        <div><a href="./index.html#youngJae">Young Jae!</a></div>
+        <div><a href="./index.html#aboutMe">ABOUT ME</a></div>
+        <div><a href="./like.html">Like</a></div>
+        <div><a href="./skills.html">Stack</a></div>
+        <div><a href="./diary.html">Diary</a></div>
+        <div style="margin-left: auto">
+          <div style="font-size: 1.5em" class="nightModToggleBtn">🌞</div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="diaryWrapper">
+          <div class="diaryHeader">
+            <form action="submit" class="diaryForm">
+              <p>오늘의 일기</p>
+              <textarea placeholder="오늘의 일기를 작성해 주세요."></textarea>
+              <button>작성하기</button>
+            </form>
+          </div>
+          <ul class="diaryList"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/main.js"></script>
+  <script src="./js/diary.js"></script>
+</html>

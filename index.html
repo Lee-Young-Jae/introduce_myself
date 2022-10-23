@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Term Project #3</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="bodyWrapper">
+      <header>
+        <h1>자기소개</h1>
+        <h1 class="clock" style="font-size: 2.5rem">시간이 나타납니다</h1>
+      </header>
+      <div class="menuBackground"></div>
+      <div class="menu">
+        <div><a href="#youngJae">Young Jae!</a></div>
+        <div><a href="./index.html#aboutMe">ABOUT ME</a></div>
+        <div><a href="./like.html">Like</a></div>
+        <div><a href="./skills.html">Stack</a></div>
+        <div><a href="./diary.html">Diary</a></div>
+
+        <div style="margin-left: auto">
+          <div style="font-size: 1.5em" class="nightModToggleBtn">🌞</div>
+        </div>
+      </div>
+      <div class="section-main-1">
+        <div>
+          <span class="typingText"></span><span class="typingBlink"></span>
+        </div>
+      </div>
+      <div class="content">
+        <div class="contentYoungJae">
+          <img
+            class="contentYoungJaeFlexItem"
+            src="./img/Me.jpg"
+            alt="Me.jpg"
+          />
+          <div id="youngJae" class="contentYoungJaeFlexItem">
+            <h2 class="titleText">
+              <a>YOUNG JAE!</a>
+            </h2>
+            <p class="strongTextA">안녕하세요 저는 "이영재" 입니다.</p>
+            <p class="strongTextB">
+              저를 소개하는 페이지에 오신 것을 진심으로 환영합니다 :D
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div id="aboutMe" class="content">
+        <div class="contentAboutMe">
+          <div class="contentAboutMeFlexItem">
+            <h2 class="titleText">ABOUT ME</h2>
+            <h2>저는 이런 사람입니다</h2>
+          </div>
+          <div class="contentAboutMeFlexItem">
+            <ul>
+              <li class="contentAboutMeLikeList">
+                <a href="./like.html">
+                  <div class="imgCard">
+                    <div class="hiddenTop">저의 좋아하는 것들 입니다.</div>
+                    <div class="subTitle">Likes</div>
+                    <img src="./img/취미.jpg" alt="취미.jpg" />
+                  </div>
+                  <div class="imgCardContent"></div>
+                </a>
+              </li>
+              <li class="contentAboutMeLikeList">
+                <a href="./skills.html">
+                  <div class="imgCard">
+                    <div class="hiddenTop">
+                      제가 다룰 수 있는 기술들 입니다.
+                    </div>
+                    <div class="subTitle">Skills</div>
+                    <img src="./img/Skills.jpg" alt="skill.jpg" />
+                  </div>
+                  <div class="imgCardContent"></div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <footer>
+        <center><p>Copyright 2022. 이영재. All Rights Reserved.</p></center>
+      </footer>
+      <div class="banner">
+        <a href="./index.html" target="_parent"> 자기 소개 페이지 </a>
+        <a href="./introduceReactJs.html" target="Main">
+          주제 소개 페이지 (React.Js)</a
+        >
+        <a href="https://github.com/Lee-Young-Jae" target="_blank"> GitHub </a>
+      </div>
+      <script src="./js/main.js"></script>
+      <script src="./js/mainScroll.js"></script>
+      <script src="./js/typing.js"></script>
+      <script src="./js/clock.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,643 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&display=swap");
+
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-size: 20px;
+  background-color: rgba(199, 234, 255, 0.445);
+}
+
+@keyframes typingCursor {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 타이핑 애니메이션 */
+
+.section-main-1 {
+  min-height: 70vh;
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.typingText {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  line-height: 5rem;
+}
+
+.typingBlink {
+  border-right: 2px solid #333333;
+  padding-right: 2px;
+  animation: typingCursor 0.5s infinite;
+}
+
+/* 메인 페이지 배너 */
+.banner {
+  margin: 0;
+  display: flex;
+  flex-grow: 1;
+  background-color: #333333;
+  align-items: center;
+  min-height: 50px;
+}
+.banner a:link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ececec;
+}
+.banner a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ececec;
+}
+.banner a:active {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ececec;
+}
+.banner a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.banner a {
+  width: 33%;
+  height: 100%;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+}
+
+.banner a:hover {
+  width: 37%;
+  background-color: #ececec;
+  color: #333333;
+  transition: 0.5s;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  font-size: 2rem;
+  padding-left: 100px;
+  justify-content: space-between;
+  /* background-color: white; */
+  align-items: center;
+}
+
+header h1 {
+  padding: 15px;
+  margin: 0;
+}
+
+.menuBackground {
+  background-color: rgba(0, 0, 0, 0.648);
+  position: absolute;
+  height: 70px;
+  width: 100%;
+}
+
+.menu {
+  margin: 0 auto;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  height: 70px;
+  padding: 0 100px;
+  z-index: 5000;
+}
+
+.menu div a:link {
+  text-decoration: none;
+  color: white;
+}
+.menu div a:visited {
+  text-decoration: none;
+  color: white;
+}
+.menu div a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.menu div {
+  width: 150px;
+  transition: 0.5s;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu div:hover {
+  /* animation: strongText 1s infinite; */
+  width: 180px;
+  transition: 0.5s;
+}
+
+.menu .nightModToggleBtn {
+  cursor: pointer;
+}
+
+.content {
+  padding: 50px 100px;
+}
+
+.contentYoungJae {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  min-height: 600px;
+  align-items: flex-start;
+}
+
+.contentYoungJaeFlexItem p {
+  font-size: 25px;
+}
+
+.contentYoungJaeFlexItem {
+  width: 40%;
+  border-radius: 20px;
+  margin-right: 50px;
+}
+
+img.contentYoungJaeFlexItem {
+  object-fit: cover;
+}
+
+.contentAboutMe {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  min-height: 600px;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.contentAboutMeFlexItem {
+  width: 45%;
+  border-radius: 20px;
+  margin-right: 50px;
+}
+
+.contentAboutMeFlexItem > ul {
+  list-style: none;
+  font-size: 0;
+}
+
+.hiddenTop {
+  font-size: 30px;
+  position: absolute;
+  bottom: 150%;
+  left: 10%;
+  z-index: 2;
+  color: white;
+  transition: 0.5s;
+}
+
+.subTitle {
+  position: absolute;
+  color: white;
+  z-index: 2;
+  top: 10%;
+  left: 10%;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.imgCard {
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.imgCard::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.imgCard img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.contentAboutMeLikeList a {
+  display: block;
+  width: auto;
+}
+
+.contentAboutMeLikeList a:hover .hiddenTop {
+  bottom: 30%;
+  transition: 1s;
+}
+
+.contentAboutMeLikeList a:hover .imgCard::after {
+  opacity: 1;
+}
+
+@keyframes titleText {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(+2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+.titleText {
+  font-weight: bold;
+  font-size: 4rem;
+  animation: titleText 4s infinite;
+  position: relative;
+}
+
+@keyframes strongText {
+  /* 0% {
+    opacity: 0.8;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  50% {
+    opacity: 0.5;
+    color: black;
+  }
+
+  100% {
+    opacity: 0.8;
+    color: black;
+  } */
+  0% {
+    transform: rotate(+2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(+2deg);
+  }
+}
+
+.strongTextA {
+  /* font-weight: bold; */
+  animation: strongText 5s infinite;
+}
+.strongTextB {
+  /* font-weight: bold; */
+  animation: strongText 6s infinite;
+}
+
+/*
+  Like Page
+*/
+
+.title {
+  padding-left: 120px;
+}
+
+.title_Food {
+  /* background-color: rgba(255, 255, 255, 0.7); */
+  background-color: white;
+  border: 1px solid #ececec;
+  color: black;
+  position: sticky;
+  top: 70px;
+  font-size: 24px;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.title_Cooking {
+  /* background-color: rgba(255, 255, 255, 0.7); */
+  background-color: white;
+  border: 1px solid #ececec;
+  color: black;
+  position: sticky;
+  top: 120px;
+  font-size: 24px;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.title_Other {
+  /* background-color: rgba(255, 255, 255, 0.7); */
+  background-color: white;
+  border: 1px solid #ececec;
+  color: black;
+  position: sticky;
+  top: 170px;
+  font-size: 24px;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.foodFlexBox {
+  display: flex;
+  padding: 10px 20px;
+  flex-grow: 1;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.cookingFlexBox {
+  display: flex;
+  padding: 10px 20px;
+  max-width: 80vw;
+  border-radius: 10px;
+  flex-grow: 1;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.foodFlexBox img {
+  margin-top: 30px;
+  max-width: 300px;
+  border-radius: 20px;
+  border: 3px solid white;
+}
+
+.cookingFlexBox img {
+  margin-top: 30px;
+  max-width: 300px;
+  border-radius: 20px;
+  border: 3px solid white;
+}
+
+/* 스크롤 바 */
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fdfdfd;
+  border: 0.1rem dashed #069a8e;
+  border-radius: 1rem;
+}
+
+/* Skills Page */
+
+.skillsFlexBox {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.frontendSkillBox {
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  box-shadow: 0 0.3rem 0.6rem rgb(0 0 0 / 40%);
+  border-radius: 10px;
+  width: 360px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.backendSkillBox {
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  box-shadow: 0 0.3rem 0.6rem rgb(0 0 0 / 40%);
+  border-radius: 10px;
+  width: 360px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.skillsType {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 3rem 2rem;
+  border-bottom: 1px solid #ececec;
+  color: #b0b0b0;
+}
+
+.skillBoxImgs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.skillBoxImgs img {
+  margin: 10px 10px;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👍</text></svg>")
+      16 0,
+    pointer;
+  transition: 1s;
+}
+.skillsDetail {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  box-shadow: 0 0.2rem 0.4rem rgb(0 0 0 / 40%);
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.3s;
+  text-align: center;
+  color: black;
+}
+
+.frontendSkillBox:hover {
+  transform: translateY(-0.5rem);
+  transition: 0.5s;
+}
+.backendSkillBox:hover {
+  transform: translateY(-0.5rem);
+  transition: 0.5s;
+}
+
+.skillBoxImgs img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.skillBoxImgs img:hover + .skillsDetail {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* DiaryPage*/
+/* .diaryWrapper {
+}
+.diaryHeader {
+}
+.diaryForm {
+} */
+
+.diaryList {
+  padding: 0;
+}
+
+.diaryList li {
+  list-style: none;
+}
+
+.diaryItem {
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  box-shadow: 0 0.3rem 0.6rem rgb(0 0 0 / 40%);
+  border-radius: 10px;
+  min-width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+  color: black;
+  padding: 15px;
+}
+
+.diaryForm textarea {
+  border: none;
+  min-width: 100%;
+  min-height: 400px;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  padding: 15px;
+  cursor: pointer;
+  /* box-shadow: 0 0.3rem 0.6rem rgb(0 0 0 / 40%); */
+}
+
+.diaryForm button {
+  border: none;
+  min-width: 100px;
+  min-height: 45px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  /* box-shadow: 0 0.3rem 0.6rem rgb(0 0 0 / 40%);
+  margin-top: 10px; */
+}
+
+.diaryItemContentWrapper {
+  margin: 15px;
+}
+
+.diaryItemContent {
+  border: none;
+  background-color: #ececec;
+  width: 90%;
+  min-height: 200px;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  color: black;
+  padding: 15px;
+}
+
+.diaryRemoveBtn {
+  border: none;
+  min-width: 100px;
+  min-height: 45px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: RGB(253, 86, 95);
+}
+
+/* 반응형 */
+@media (max-width: 800px) {
+  header {
+    text-align: center;
+    padding: 0px;
+  }
+
+  .contentYoungJaeFlexItem {
+    width: 100%;
+    border-radius: 20px;
+    margin-right: 50px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .titleText {
+    font-size: 2rem;
+  }
+
+  .contentYoungJaeFlexItem p {
+    font-size: 15px;
+  }
+
+  .contentAboutMeFlexItem {
+    width: 100%;
+  }
+
+  .contentAboutMeFlexItem ul {
+    padding: 0;
+  }
+
+  .hiddenTop {
+    font-size: 16px;
+  }
+
+  .subTitle {
+    font-size: 20px;
+  }
+
+  .menu div {
+    justify-content: space-around;
+  }
+  .menu {
+    padding: 0;
+  }
+  .title {
+    padding: 0;
+    text-align: center;
+  }
+}

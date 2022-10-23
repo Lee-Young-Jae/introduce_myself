@@ -1,0 +1,597 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+  background-color: #f6f6f6;
+  margin: 0;
+}
+
+a:link {
+  text-decoration: none;
+  color: #333333;
+}
+a:visited {
+  text-decoration: none;
+  color: #333333;
+}
+a:active {
+  text-decoration: none;
+  color: #333333;
+}
+a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+@keyframes loadingDivAnimation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingAnimation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -118.611;
+  }
+}
+
+/* 로딩 */
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #000000f5; */
+  background: #fffffff4;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.5s;
+  opacity: 0;
+  /* min-width: 100vw;
+  min-height: 100vh; */
+}
+
+.before-loading .loading {
+  opacity: 1;
+}
+
+.loadingSvg {
+  width: 42px;
+  height: 42px;
+  animation: loadingDivAnimation 3s infinite;
+}
+
+.loadingSvg circle {
+  fill: none; /* 색 채우기 */
+  stroke: #00c6fd; /* 테두리 */
+  stroke-width: 3;
+  stroke-dasharray: 30; /* ~ 118.6112289428711 document.querySelector("circle").getTotalLength()*/
+  stroke-dashoffset: 118;
+  /* transition: 1s; */
+  animation: loadingAnimation 1s infinite;
+}
+
+/* 배너 */
+
+.bannerWrapper {
+  position: sticky;
+  bottom: 0;
+}
+
+.banner {
+  margin: 0;
+  display: flex;
+  flex-grow: 1;
+  background-color: #333333;
+  align-items: center;
+  min-height: 50px;
+}
+.banner a:link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ececec;
+}
+.banner a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ececec;
+}
+.banner a:active {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ececec;
+}
+.banner a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.banner a {
+  width: 33%;
+  height: 100%;
+  text-align: center;
+  transition: 0.5s;
+  vertical-align: middle;
+}
+
+.banner a:hover {
+  width: 37%;
+  background-color: #ececec;
+  color: #333333;
+  transition: 0.5s;
+}
+
+/* react CSS */
+
+.scrollContainer {
+  scroll-behavior: smooth;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  background-color: #ffffff;
+  width: 60%;
+  box-shadow: 1px 2px 10px #00000065;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#show-section-0 .content-0 .stickyElement,
+#show-section-1 .content-1 .stickyElement,
+#show-section-2 .content-2 .stickyElement,
+#show-section-3 .content-3 .stickyElement {
+  display: block;
+}
+
+.content {
+  vertical-align: middle;
+  font-size: 2rem;
+  line-height: 100px;
+  word-spacing: 3px;
+  padding: 0 10px;
+}
+
+.header {
+  padding: 30px 10px 0;
+  font-size: 1.5rem;
+}
+
+.content p {
+  padding: 0 100px;
+}
+
+.content .stickyElement {
+  position: fixed;
+  top: 35vh;
+  /* left: 0vw; */
+  width: 100%;
+  display: none;
+  padding: 0;
+  opacity: 0;
+  width: 60%;
+  margin: 0 auto;
+  transition: 0.5s;
+}
+
+.partTable {
+  border-top: 5px solid #262526;
+  border-bottom: 5px solid #262526;
+}
+
+/* .partTable:hover {
+  border-top: 5px solid #61dafb;
+  border-bottom: 5px solid #61dafb;
+  border-radius: 10px;
+  transition: 0.3s;
+} */
+
+table {
+  margin: 0 auto;
+  font-size: 23px;
+  line-height: 50px;
+}
+
+td ul {
+  list-style: none;
+}
+
+.imgFlexTable {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 550px;
+}
+
+.imgFlexTableItem {
+  min-width: 26%;
+  min-height: 33%;
+  border-radius: 10px;
+  padding: 20px 10px;
+  letter-spacing: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.imgFlexTable .companyTitle {
+  opacity: 0;
+}
+
+.imgFlexTable div:hover img {
+  display: none;
+  opacity: 0;
+  transition: 1s;
+}
+.imgFlexTable div:hover .companyTitle {
+  min-width: 26%;
+  min-height: 100px;
+
+  display: inline-block;
+  opacity: 1;
+  transition: 1s;
+}
+
+.imgFlexBox {
+  margin: 40px 20px;
+  padding: 20px;
+  border-radius: 10px;
+  /* display: flex; */
+  background-color: #ececec;
+  /* align-items: center; */
+}
+
+.imgFlexBox img {
+  max-width: 300px;
+}
+
+/* 다음 secction button 애니메이션 효과 */
+.nextSectionBtn {
+  border: none;
+  min-width: 15px;
+  min-height: 15px;
+  background: linear-gradient(15deg, #61dafb 5%, #00c6fd 100%);
+  color: black;
+  cursor: pointer;
+  font-weight: 900;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.nextSectionBtn:hover {
+  transform: scale(1.1);
+  border-radius: 10px;
+}
+@keyframes ring {
+  0% {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+.nextSectionBtn:hover::after {
+  content: "";
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 3px solid #61dafb;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+}
+
+.moveTop {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  border: none;
+  min-width: 30px;
+  min-height: 30px;
+  background: linear-gradient(15deg, #61dafb 5%, #00c6fd 100%);
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.moveTop:hover::after {
+  content: "";
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 3px solid #61dafb;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+}
+
+/* 다음 이전 버튼 */
+.otherPageBtn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  width: 95px;
+  height: 50px;
+  background-color: #61dafb;
+}
+
+@keyframes buttonRing {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
+.otherPageBtn:hover {
+  transform: translate(0, -3px) scale(1.01);
+  transition: 0.5s;
+}
+
+.otherPageBtn:hover::after {
+  content: "";
+  border: 5px solid #61dafb;
+  border-radius: 100%;
+  transform: translate(+50%, -50%);
+  animation: buttonRing 1.5s infinite;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: 50%;
+}
+
+.menu {
+  position: fixed;
+  right: 10px;
+  top: 50px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 0 20px;
+  box-shadow: 0 1px 10px #00000065;
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+.menu ul {
+  color: #00c6fd;
+  font-weight: bold;
+  list-style: none;
+  background-color: #ececec;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 250px;
+}
+
+.menu ul li {
+  overflow: hidden;
+  height: 25px;
+  transition: 0.5%;
+}
+
+.menu ul li:hover {
+  background-color: #ffffff;
+  height: 60%;
+  transition: 1s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.menu .active {
+  background-color: #00c6fd;
+  border-radius: 10px;
+}
+
+.menu .active:hover {
+  background-color: #00c6fd;
+  border-radius: 10px;
+  color: #333333;
+}
+
+.menu .hiddenAtag:link {
+  text-decoration: none;
+  color: #61dafb;
+}
+.menu .hiddenAtag:visited {
+  text-decoration: none;
+  color: #61dafb;
+}
+.menu .hiddenAtag:active {
+  text-decoration: none;
+  color: #61dafb;
+}
+.menu .hiddenAtag:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.iosAndroidToReactNative {
+  overflow: hidden;
+  width: 500px;
+  height: 200px;
+  border-radius: 100px;
+  /* border: 1px solid #ececec; */
+  margin: 0 auto;
+}
+
+.imgAndroid {
+  transform: translateX(0%);
+  transition: 1s;
+}
+
+.imgIos {
+  transform: translateX(0%);
+  transition: 1s;
+}
+
+.imgReact {
+  transform: translateY(0%);
+  opacity: 0;
+  transition: 1s;
+}
+
+.iosAndroidToReactNative:hover .imgAndroid {
+  transform: translateX(-100%);
+  opacity: 0.5;
+  transition: 2s;
+}
+
+.iosAndroidToReactNative:hover .imgIos {
+  transform: translateX(100%);
+  opacity: 0.5;
+
+  transition: 2s;
+}
+
+.iosAndroidToReactNative:hover .imgReact {
+  transform: translateY(-110%);
+  opacity: 1;
+  transition: 2s;
+}
+
+.svgfilter {
+  filter: invert(72%) sepia(54%) saturate(4743%) hue-rotate(165deg)
+    brightness(96%) contrast(84%);
+
+  transform: rotate(480deg);
+  transition: 1.2s;
+}
+
+.svgfilter:hover {
+  filter: invert(72%) sepia(54%) saturate(4743%) hue-rotate(165deg)
+    brightness(96%) contrast(84%);
+
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+/* 틱택토 게임 */
+.tictactoeGameForm {
+  padding: 5%;
+  background-color: #ececec;
+  box-shadow: 0 1px 10px #00000065;
+  border-radius: 20px;
+  margin: 0 20%;
+}
+
+.tictactoeGameForm table {
+  margin-top: 10px;
+  border-collapse: collapse;
+  border-radius: 20px;
+  border: 1px solid #ececec;
+  /* background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%); */
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  margin: auto;
+}
+
+.tictactoeGameForm td {
+  border: 1px solid #ececec;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+}
+.tictactoeGameForm div {
+  margin-top: 10px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 1rem;
+}
+
+.tictactoeGameForm button {
+  border: none;
+  cursor: pointer;
+  color: #00c6fd;
+  font-weight: bold;
+}
+
+@media (max-width: 1150px) {
+  .menu {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .content p {
+    padding: 0;
+    font-size: 16px;
+  }
+
+  ul {
+    font-size: 0;
+  }
+
+  li {
+    font-size: 16px;
+  }
+}
+
+/* 스크롤 바 */
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fdfdfd;
+  border: 0.1rem dashed #069a8e;
+  border-radius: 1rem;
+}
+
+.loadingBar {
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  min-height: 3px;
+  /* background-color: #00c6fd; */
+  background-color: #ffffff;
+}
+
+.loadedBar {
+  background-image: linear-gradient(to top, #00c6fd 0%, #fbd2d2 100%);
+  box-shadow: 0 1px 10px #00000065;
+  min-height: 9px;
+  width: 0%;
+}
+
+::-webkit-scrollbar {
+  display: none !important;
+}
